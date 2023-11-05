@@ -25,12 +25,13 @@ body {
     font-style: normal;
     font-weight: 500;
     color: #000;
+    transition: 0.2s;
 }
 
 .nav__item:hover {
     text-decoration: none;
     color: #FF6464;
-    transition: 0.2s;
+    
 }
 
 .hero {
@@ -80,12 +81,13 @@ h1 {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
+    transition: 0.4s;
 }
 
 .hero__button:hover {
     cursor: pointer;
     background: #fa2f2f;
-    transition: 0.4s;
+    
 }
 
 .hero__img {
@@ -118,6 +120,12 @@ h1 {
 }
 
 .blog-posts__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-posts__heading-1 {
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Heebo;
@@ -127,13 +135,35 @@ h1 {
     line-height: 60px;
 }
 
+.blog-posts__heading-2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #00A8CC;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
 @media (max-width: 767px) {
     .col-md-margin {
         margin: 8px;
     }
 
-    .blog-posts__heading {
+    .blog-posts__heading-1 {
         text-align: center;
+    }
+
+    .blog-posts__heading-2 {
+        display: none;
+    }
+
+    .blog-posts__heading {
+        justify-content: center;
     }
 }
 
